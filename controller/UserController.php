@@ -7,14 +7,14 @@
  * CbLanguageController class where we group all actions CRUD (Create Read Update Delete), 
  * and additional utilities for database table data <b>cb_language</b>.
   */
-class CbLanguageController {
+class UserController {
     var $cdb = null;
     /**
      * Devolvemos todos los resultados de la consulta sobre cb_language.
      * We return all the results of the query on cb_language.
      */
     public function readAll(){
-        $query = "SELECT * FROM cb_language;";
+        $query = "SELECT id_user, name, user_name FROM users;";
         $statement = $this->cdb->prepare($query);
         $statement->execute();
         $rows = $statement->fetchAll(\PDO::FETCH_OBJ);
@@ -34,7 +34,7 @@ class CbLanguageController {
      * @param type $isbaselanguage
      * @param type $issystemlanguage
      */
-    public function create(){ 
+   /* public function create(){ 
         $sqlInsert = "INSERT INTO cb_language(idlanguage, namelanguage, isactive, languageiso, countrycode, isbaselanguage, issystemlanguage)"
                  . "    VALUES ('".$idlanguage."', '".$namelanguage."', '".$isactive."', '".$languageiso."', '".$countrycode."', '".$isbaselanguage."', '".$issystemlanguage."')";
         try {             
@@ -43,7 +43,7 @@ class CbLanguageController {
             echo 'Error crear un nuevo elemento cb_language en create(...): '.$pdoException->getMessage();
             exit();
         }
-    }//Create Method
+    }//Create Method*/
 
 
 

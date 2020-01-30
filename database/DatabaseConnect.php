@@ -1,15 +1,5 @@
 <?php
  
-//use PDO;
- 
-/**
- * En la clase <b>DatabaseConnect</b> vamos a incluir los métodos que utilizamos para crear y 
- * administrar la conexión a la base de datos.
- * In the "Database Connect" class we will include the methods we use to create and 
- * manage the connection to the database.
- * @author Xules You can follow me on my website http://www.codigoxules.org/en
- * Puedes seguirme en mi web http://www.codigoxules.org).
- */
 class DatabaseConnect {
      
     /**
@@ -20,8 +10,8 @@ class DatabaseConnect {
      */
     public function dbConnectSimple(){        
         $dbsystem='mysql';
-        $host='127.0.0.1';
-        $dbname='customerdb';
+        $host='localhost';
+        $dbname='silar';
         $username='dev';
         $passwd='desarrollo'; 
         return $this->dbConnect($dbsystem, $host, $dbname, $username, $passwd);
